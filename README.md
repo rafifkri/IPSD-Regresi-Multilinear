@@ -1,5 +1,7 @@
 # Analisis dan Prediksi Harga Saham TLKM Menggunakan Regresi Linear
 
+Rafif FIkri 103102400068
+
 ## Kaggle
 
 https://www.kaggle.com/datasets/irfansaputranst/dataset-saham-tlkm-jk
