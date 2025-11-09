@@ -26,6 +26,7 @@ Dataset ini berisi data saham dari PT Telekomunikasi Indonesia Tbk (TLKM.JK) yan
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.preprocessing import LabelEncoder
@@ -295,6 +296,21 @@ print(f"R-squared (R2) Score: {r2_new:.2f}")
 ```
 
 <img width="317" height="79" alt="image" src="https://github.com/user-attachments/assets/227ae9f1-e8fd-46d5-bf90-8d56034932ea" />
+
+### Program 18
+
+#### Untuk memahami hubungan antar variabel, terutama setelah penambahan fitur-fitur baru, visualisasi matriks korelasi menggunakan heatmap sangatlah efektif. Heatmap akan menampilkan koefisien korelasi antara setiap pasang variabel numerik
+
+```python
+correlation_matrix = df.select_dtypes(include=['float64', 'int64']).corr()
+
+plt.figure(figsize=(12, 10))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
+plt.title('Correlation Matrix of Features')
+plt.show()
+```
+<img width="795" height="741" alt="image" src="https://github.com/user-attachments/assets/cddef155-4acc-4509-a9c4-c54e2f3ad6f7" />
+
 
 ## Kesimpulan
 
